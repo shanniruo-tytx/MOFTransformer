@@ -235,10 +235,10 @@ mof downstream
 """
 
 @ex.named_config
-def mof_raspa_1bar():
-    exp_name = "mof_raspa_1bar"
+def mof_raspa_100bar():
+    exp_name = "mof_raspa_100bar"
     # root_dataset = ##
-    downstream = "raspa_1bar"
+    downstream = "raspa_100bar"
     max_epochs = 20
     batch_size = 32
     mean = 487.866
