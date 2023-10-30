@@ -40,7 +40,7 @@ dft/
 figures/
 case_study/
 data/
-test/
+# test/
 tmp/
 embedding
 
