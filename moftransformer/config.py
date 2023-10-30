@@ -71,14 +71,20 @@ def config():
     log_dir = "logs/"
     batch_size = 32  # desired batch size; for gradient accumulation
     per_gpu_batchsize = 8  # you should define this manually with per_gpu_batch_size
-    accelerator = "auto"
-    devices = "auto"
+    # accelerator = "auto"
+    accelerator = "gpu"
+    # devices = "auto"
+    devices = 1
     num_nodes = 1
 
     load_path = _set_load_path('pmtransformer')
 
-    num_workers = 16  # the number of cpu's core
-    precision = 16
+    # num_workers = 16  # the number of cpu's core
+    num_workers = 0  # the number of cpu's core
+    # precision = 16
+    # precision = "bf16"
+    precision = "16-mixed"
+
 
     # normalization target
     mean = None

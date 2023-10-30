@@ -259,12 +259,13 @@ def main(_config):
 
     max_steps = _config["max_steps"] if _config["max_steps"] is not None else None
 
-    if _IS_INTERACTIVE:
-        strategy = None
-    elif pl.__version__ >= '2.0.0':
-        strategy = "ddp_find_unused_parameters_true"
-    else:
-        strategy = "ddp"
+    # if _IS_INTERACTIVE:
+    #     strategy = None
+    # elif pl.__version__ >= '2.0.0':
+    #     strategy = "ddp_find_unused_parameters_true"
+    # else:
+    #     strategy = "ddp"
+    strategy = "auto"
 
     log_every_n_steps = 10
 

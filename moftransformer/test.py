@@ -220,12 +220,13 @@ def main(_config):
     dm.setup('test')
     model.eval()
 
-    if _IS_INTERACTIVE:
-        strategy = None
-    elif pl.__version__ >= '2.0.0':
-        strategy = "ddp_find_unused_parameters_true"
-    else:
-        strategy = "ddp"
+    # if _IS_INTERACTIVE:
+    #     strategy = None
+    # elif pl.__version__ >= '2.0.0':
+    #     strategy = "ddp_find_unused_parameters_true"
+    # else:
+    #     strategy = "ddp"
+    strategy = "auto"
 
     trainer = pl.Trainer(
         accelerator=_config["accelerator"],
