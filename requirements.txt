@@ -1,7 +1,7 @@
 # MOFTransformer version 2.1.2
 wget
-torch<2.0.0
-pytorch-lightning==1.7.0 # pytorch-lightning>=1.7.0
+# torch=2.1.0  1.x版本torch无法启用gpu加速器
+# pytorch-lightning 选择对应torch版本
 torchmetrics<1.0.0, >=0.6.0
 transformers>=4.12.5
 timm>=0.4.12
